@@ -1,0 +1,86 @@
+<Protocol>
+	<Title>Stress Granules ImmunoStaining</Title>
+	<Abstract>Immunostaining protocol for stress Granules</Abstract> 
+	<Materials>
+		<Item id="PFA">4% PFA in PBS</Item>
+		<Item id="PBS">PBS</Item>
+		<Item id="0.4Triton" name="Permabilisation Buffer">0.4% Triton in PBS</Item>
+		<Item id="ABbuffer" name="Antibody Buffer">0.1% Triton, 2% in Donkey Serum, in PBS</Item>
+		<Item id="Blocking" name="Blocking Buffer">10% Donkey Serum, 0.1% Triton, in PBS</Item>
+		<Item id="TIA@goat">TIA-Goat</Item>
+		<Item id="ATX2@mouse">Ataxin-2-Mouse</Item>
+		<Item id="FUS@rabbit">FUS-Rabbit</Item>
+		<Item id="donkey@rabbit-647">Donkey-Rabbit-647</Item>
+		<Item id="donkey@mouse-555">Donkey-Mouse-555</Item>
+		<Item id="donkey@goat-488">Donkey-Goat-488</Item>
+		<Item id="Hoechst">Hoescht 1:100 in H2O</Item>
+	</Materials>
+	<Steps>
+		<Step>
+			<Description>Prepare all the materials</Description>
+		</Step>
+		<Step>
+			<Description>Fix the cells in 4% PFA</Description>
+			<Time unit="mn">15</Time>
+			<Temperature unit="C">4</Temperature>
+			<Warning>Use a Chemical Hood !</Warning>
+		</Step>
+		<Step>
+			<Description>Wash with {%PBS%}</Description>
+			<Time unit="mn">5</Time>
+			<Temperature unit="C">RT</Temperature>
+			<Repeat>3</Repeat>
+		</Step>
+		<Step>
+			<Description>Permeate the cells with {%0.4Triton%}</Description>
+			<Time unit="mn">30</Time>
+			<Temperature unit="C">RT</Temperature>
+		</Step>
+		<Step>
+			<Description>Block with {%Blocking%}</Description>
+			<Time unit="mn">60</Time>
+			<Temperature unit="C">RT</Temperature>
+		</Step>
+		<Step>
+			<Description>Wash with {%PBS%}</Description>
+			<Time unit="mn">5</Time>
+			<Temperature unit="C">RT</Temperature>
+			<Repeat>3</Repeat>
+		</Step>
+		<Step>
+			<Description>1st Antibody binding step\nMix in {%ABbuffer%}:\n{%TIA@goat%} 1:50\n{%ATX2@mouse%} 1:100\n{%FUS@rabbit%} 1:500</Description>
+			<Time unit="h">1</Time>
+			<Temperature unit="C">RT</Temperature>
+		</Step>
+		<Step>
+			<Description>Wash with {%PBS%}</Description>
+			<Time unit="mn">5</Time>
+			<Temperature unit="C">RT</Temperature>
+			<Repeat>3</Repeat>
+		</Step>
+		<Step>
+			<Description>2st Antibody binding step\nMix in {%ABbuffer%}:\n{%donkey@rabbit-647%} 1:1000\n{%donkey@mouse-555%} 1:1000\n{%donkey@goat-488%} 1:1000</Description>
+			<Time unit="h">1</Time>
+			<Temperature unit="C">RT</Temperature>
+			<Warning>Light Sensitive</Warning>
+		</Step>
+		<Step>
+			<Description>Wash with {%PBS%}</Description>
+			<Time unit="mn">5</Time>
+			<Temperature unit="C">RT</Temperature>
+			<Repeat>3</Repeat>
+		</Step>
+		<Step>
+			<Description>Stain DNA with {%Hoescht%}</Description>
+			<Time unit="mn">10,30</Time>
+			<Temperature unit="C">RT</Temperature>
+		</Step>
+		<Step>
+			<Description>Wash with {%PBS%}</Description>
+			<Time unit="mn">5</Time>
+			<Temperature unit="C">RT</Temperature>
+			<Repeat>3</Repeat>
+		</Step>
+	</Steps>
+</Protocol>		
+
